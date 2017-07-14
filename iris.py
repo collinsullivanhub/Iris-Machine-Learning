@@ -1,13 +1,10 @@
 
-
-#Imports_____________________________________________________________________________________________
-
 import matplotlib.pyplot as plt 
 import numpy as np
 import pandas as pd 
 
 
-#Perceptron Algorithm Class__________________________________________________________________________
+#Perceptron Algorithm Class
 
 class Perceptron(object):
 
@@ -36,9 +33,7 @@ class Perceptron(object):
     def predict(self, X):
         return np.where(self.net_input(X) >= 0.0, 1, -1)
 
-
-
-#Display Petal Graph__________________________________________________________________________________
+#Display Petal Graph
  
 df = pd.read_csv('iris.data', header=None)
 df.tail()
@@ -56,9 +51,7 @@ plt.ylabel('petal length')
 plt.legend(loc='upper left')
 plt.show()
 
-
-
-#Train and Show Data__________________________________________________________________________________
+#Train and Show Data
 
 ppn = Perceptron(eta=0.1, epochs=10)
 
